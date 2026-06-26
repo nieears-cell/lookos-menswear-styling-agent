@@ -2,7 +2,7 @@
 
 LookOS is an interview showcase for a menswear AI Styling Agent. The entry page links to:
 
-- the interactive Style Tuner prototype
+- the interactive Style Tuner prototype with generated outfit recommendations
 - the portfolio deck
 - the interview pitch script
 
