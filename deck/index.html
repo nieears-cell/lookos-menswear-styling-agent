@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LookOS - Style Tuner Portfolio Deck</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="deck" aria-live="polite">
+      <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+      <section class="slide cover is-active" data-slide="1">
+        <div class="cover-copy">
+          <p class="eyebrow">Portfolio case / menswear AI product</p>
+          <h1>LookOS</h1>
+          <h2>把五行穿搭重构成可调的男装 AI Styling Agent</h2>
+          <p class="lead">
+            这不是“今日大吉色”查询，而是一个能读取日程、天气、衣橱和情绪目标，并把它们转成可操作男装方案的 Style Tuner。
+          </p>
+          <div class="meta-row">
+            <span>AI Product</span>
+            <span>Agent Workflow</span>
+            <span>Data Feedback</span>
+          </div>
+        </div>
+        <figure class="cover-visual">
+          <img src="./assets/lookos-reliable-operator.png" alt="LookOS reliable operator menswear outfit" />
+        </figure>
+      </section>
+
+      <section class="slide two-column" data-slide="2">
+        <div>
+          <p class="eyebrow">01 / product problem</p>
+          <h2>传统五行穿衣只告诉颜色，但真实穿搭要解决场景。</h2>
+          <p class="lead">
+            用户不是想知道“今天白色好不好”，而是想知道：今天见客户、晚上吃饭、天气 23°C，我该怎么穿才可信又不僵。
+          </p>
+        </div>
+        <div class="diagnosis">
+          <article>
+            <b>旧入口</b>
+            <p>今日颜色：白、银、黄、棕、肤。</p>
+          </article>
+          <article>
+            <b>真实决策</b>
+            <p>颜色放在哪个单品上？正式到什么程度？晚上要不要松一点？</p>
+          </article>
+          <article>
+            <b>新机会</b>
+            <p>把五行降级为解释层，把入口换成日程、场景和用户想呈现的状态。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="slide thesis" data-slide="3">
+        <p class="eyebrow">02 / core product judgment</p>
+        <h2>AI 不该替用户做审美决定，而应该让用户可控地调出今天的自己。</h2>
+        <div class="style-grid">
+          <article>
+            <span>Formality</span>
+            <b>正式度</b>
+            <p>决定西装、针织、鞋款和裤型的正式边界。</p>
+          </article>
+          <article>
+            <span>Presence</span>
+            <b>存在感</b>
+            <p>决定黑色面积、对比度、领带或线条强度。</p>
+          </article>
+          <article>
+            <span>Freshness</span>
+            <b>清爽度</b>
+            <p>决定白灰面积、材质轻重和年龄感。</p>
+          </article>
+          <article>
+            <span>Calendar</span>
+            <b>场景权重</b>
+            <p>客户拜访是主场景，晚餐是切换场景。</p>
+          </article>
+          <article>
+            <span>Five colors</span>
+            <b>色彩转译</b>
+            <p>白/银做清晰，棕/肤做亲和，黄只做少量暖意。</p>
+          </article>
+        </div>
+        <p class="quote">核心动作从“看推荐”变成“调状态”。</p>
+      </section>
+
+      <section class="slide system-map" data-slide="4">
+        <p class="eyebrow">03 / agent system</p>
+        <h2>从日历到 Look：Agent 把多约束任务变成一套可穿方案。</h2>
+        <div class="pipeline">
+          <span>Calendar</span>
+          <i></i>
+          <span>Scene Weight</span>
+          <i></i>
+          <span>Weather</span>
+          <i></i>
+          <span>Wardrobe</span>
+          <i></i>
+          <span>Style Tuner</span>
+          <i></i>
+          <span>Look</span>
+        </div>
+        <div class="scenario-card">
+          <div>
+            <small>Example input</small>
+            <b>10:00 团队周会 / 14:30 客户拜访 / 19:00 晚餐</b>
+          </div>
+          <p>
+            系统把客户拜访设为主锚点，用 Reliable Operator 建立可信感；如果用户降低正式度，则切到 After-hours Ease，适合晚餐过渡。
+          </p>
+        </div>
+      </section>
+
+      <section class="slide prototype" data-slide="5">
+        <div>
+          <p class="eyebrow">04 / prototype</p>
+          <h2>新版首页：日程简报 + 三轴 Style Tuner + 实时男装预览。</h2>
+          <p class="lead">
+            首屏不再是静态结果页，而是一个可以拖动、可以调性格、可以看即时反馈的小程序操作页。
+          </p>
+          <ul class="tight-list">
+            <li>三条滑杆：正式度、存在感、清爽度。</li>
+            <li>三套 Look：Reliable Operator、Quiet Authority、After-hours Ease。</li>
+            <li>三层证据：Why、Evidence、Feedback。</li>
+          </ul>
+        </div>
+        <figure class="phone-shot">
+          <img src="./assets/prototype-style-tuner-home.png" alt="LookOS Style Tuner home screen" />
+        </figure>
+      </section>
+
+      <section class="slide compare" data-slide="6">
+        <p class="eyebrow">05 / controllable output</p>
+        <h2>同一天，不同状态，生成不同男装方案。</h2>
+        <div class="phone-row">
+          <figure class="phone-mini">
+            <img src="./assets/prototype-style-tuner-home.png" alt="Reliable Operator screen" />
+          </figure>
+          <figure class="phone-mini">
+            <img src="./assets/prototype-style-tuner-authority.png" alt="Quiet Authority screen" />
+          </figure>
+          <figure class="phone-mini">
+            <img src="./assets/prototype-style-tuner-relaxed.png" alt="After-hours Ease screen" />
+          </figure>
+        </div>
+        <div class="role-fit">
+          <span>默认可信</span>
+          <span>提高存在感</span>
+          <span>降低正式度</span>
+        </div>
+      </section>
+
+      <section class="slide agent" data-slide="7">
+        <p class="eyebrow">06 / evidence layer</p>
+        <h2>面试里真正要讲的是：推荐背后的证据链。</h2>
+        <div class="agent-layout">
+          <figure class="phone-mini">
+            <img src="./assets/prototype-style-tuner-evidence.png" alt="LookOS evidence panel" />
+          </figure>
+          <div class="steps">
+            <article><span>1</span><b>日程锚点</b><p>客户拜访权重最高，晚餐是次场景。</p></article>
+            <article><span>2</span><b>天气约束</b><p>杭州阴 23°C，薄外套可穿，避免厚重内搭。</p></article>
+            <article><span>3</span><b>衣橱命中</b><p>基于已有男装单品组合，并暴露缺口。</p></article>
+            <article><span>4</span><b>五行转译</b><p>把颜色从玄学话术改成现代风格 metadata。</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide feedback" data-slide="8">
+        <div>
+          <p class="eyebrow">07 / data loop & role fit</p>
+          <h2>Badcase 被设计成数据闭环，而不是简单“不喜欢”。</h2>
+          <p class="lead">
+            “太凌厉、太普通、偏热、有点土”会落成可归因标签，下一次直接影响推荐参数。
+          </p>
+        </div>
+        <div class="feedback-layout">
+          <figure class="phone-mini">
+            <img src="./assets/prototype-style-tuner-feedback.png" alt="LookOS feedback panel" />
+          </figure>
+          <div class="badcase-table">
+            <div><b>太凌厉</b><span>style_sharpness_high</span></div>
+            <div><b>太普通</b><span>style_distinctiveness_low</span></div>
+            <div><b>偏热</b><span>weather_constraint_failed</span></div>
+            <div><b>有点土</b><span>style_modernity_low</span></div>
+          </div>
+        </div>
+        <div class="role-fit">
+          <span>AI 产品经理</span>
+          <span>Agent 数据产品</span>
+          <span>情感智能</span>
+          <span>AI 创作评测</span>
+          <span>跨界技术产品</span>
+        </div>
+      </section>
+    </main>
+
+    <nav class="deck-controls" aria-label="Slide controls">
+      <button id="prevSlide" aria-label="Previous slide">‹</button>
+      <span id="slideCounter">1 / 8</span>
+      <button id="nextSlide" aria-label="Next slide">›</button>
+    </nav>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

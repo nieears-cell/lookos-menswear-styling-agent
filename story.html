@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LookOS 面试讲稿</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="site-shell">
+      <article class="article-page">
+        <nav aria-label="page links">
+          <a href="./index.html">返回入口</a>
+          <a href="./prototype/index.html">试用原型</a>
+          <a href="./deck/index.html">看 Deck</a>
+        </nav>
+
+        <p class="eyebrow">Pitch script</p>
+        <h1>LookOS 面试讲稿</h1>
+
+        <h2>30 秒版本</h2>
+        <p>
+          LookOS 是一个男装 AI Styling Agent。我没有把“五行穿搭”做成传统的今日颜色查询，而是把它重构成一个 Style Tuner：用户先告诉系统今天想显得更商务、更有存在感，还是更清爽，系统再结合日程、天气、衣橱和今日颜色优先级生成一套男装方案。它的重点不是玄学，而是把审美判断变成可控、可解释、可反馈的数据产品。
+        </p>
+
+        <h2>3 分钟版本</h2>
+        <h3>1. 问题重构</h3>
+        <p>
+          传统五行穿衣大多只给颜色，比如今天适合白、银、黄、棕、肤。但真实用户不是只问颜色，而是问：今天 14:30 有客户拜访，晚上还要吃饭，杭州 23°C 阴天，我应该穿什么才可信、干净、不显用力？
+        </p>
+        <p>所以我把五行从入口降级为解释层，把入口换成日程和用户状态。</p>
+
+        <h3>2. 产品动作</h3>
+        <p>新版首页不是静态推荐结果页，而是 Style Tuner。用户可以调三条轴：</p>
+        <ul>
+          <li>正式度：商务到松弛</li>
+          <li>存在感：克制到有气场</li>
+          <li>清爽度：成熟到清爽</li>
+        </ul>
+        <p>
+          这样 AI 不再是替用户做审美决定，而是帮助用户把“今天想被如何看见”翻译成可穿的男装方案。
+        </p>
+
+        <h3>3. Agent 证据</h3>
+        <p>系统会把日程、天气、衣橱和颜色优先级合在一起：</p>
+        <ul>
+          <li>日程：客户拜访是主场景，晚餐是次场景</li>
+          <li>天气：23°C 阴天，薄外套可穿</li>
+          <li>衣橱：白衬衫、灰西裤、乐福鞋、公文包命中</li>
+          <li>色彩：白/银做清晰感，棕/肤做亲和过渡，黄只做少量暖意</li>
+        </ul>
+        <p>这使它更像任务型 Agent，而不是聊天式建议。</p>
+
+        <h3>4. 数据闭环</h3>
+        <p>反馈不是简单赞踩，而是 badcase 标签：</p>
+        <ul>
+          <li>太凌厉：<code>style_sharpness_high</code></li>
+          <li>太普通：<code>style_distinctiveness_low</code></li>
+          <li>偏热：<code>weather_constraint_failed</code></li>
+          <li>有点土：<code>style_modernity_low</code></li>
+        </ul>
+        <p>
+          这些反馈可以反向调整下一次推荐参数，所以这套作品能展示 AI 产品、Agent 工作流、情感智能和 AI 创作评测四类能力。
+        </p>
+
+        <h2>面试官追问时怎么答</h2>
+        <h3>为什么只做男装？</h3>
+        <p>
+          因为男装更适合参数化：正式度、存在感、清爽度、结构感这些维度更稳定，也更容易从衣橱单品映射到推荐逻辑。先把一个垂直场景做深，比泛泛做男女装更适合展示产品判断。
+        </p>
+
+        <h3>为什么不用聊天入口？</h3>
+        <p>
+          聊天适合表达需求，但不适合高频决策。穿搭是每天早上 30 秒内要完成的任务，所以我选择滑杆和场景卡，让用户快速控制 AI，而不是反复对话。
+        </p>
+
+        <h3>五行会不会显得玄学？</h3>
+        <p>
+          我刻意没有做罗盘、黄历、国潮符号。五行只作为颜色优先级和解释层存在，用户看到的是结构、可信、从容、清爽这些现代风格词。
+        </p>
+
+        <h3>如果继续做产品化，下一步是什么？</h3>
+        <p>
+          第一步接日历授权和衣橱上传；第二步做用户偏好红线，比如不穿领带、不穿皮鞋、不要亮黄；第三步把 badcase 标签接进推荐策略，形成个性化调参。
+        </p>
+      </article>
+    </main>
+  </body>
+</html>
